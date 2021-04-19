@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-contact></app-contact>
+      <div class="row">
+        <div class="col-md-6">
+          <h3 class="ak-title">Country-State-City Dropdown list populate</h3>
+          <div class="form-group">
+            <select (change)="onCountry($event.target)" class="form-control" name="" id="">
+              <option value="">Select</option>
+              <option *ngFor="let item of countryList" value="{{item.iso2}}">
+                {{item.name}}
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select (change)="onState($event.target)" class="form-control" name="" id="">
+              <option value="">Select</option>
+              <option *ngFor="let item of stateList" value="{{item.state_code}}">
+                {{item.name}}
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select (change)="onCity($event.target)" class="form-control" name="" id="">
+              <option value="">Select</option>
+              <option *ngFor="let item of cityList" value="{{item.name}}">
+                {{item.name}}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h3 class="ak-title">{{selectedCountry}}</h3>
+          <h3 class="ak-title">{{selectedState}}</h3>
+          <h3 class="ak-title">{{selectedCity}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

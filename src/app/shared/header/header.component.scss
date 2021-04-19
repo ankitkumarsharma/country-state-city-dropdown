@@ -1,0 +1,23 @@
+@import '../../scss/variable';
+.navbar{
+  background-color: $primary_color;
+  a{
+    color: $white_color;
+  }
+  .navbar-collapse{
+    .navbar-nav{
+      a{
+        color: $white_color;
+        &.current-user{
+          text-transform: capitalize;
+          color: #230b20;
+          font-weight: 700;
+        }
+      }
+      p{
+        margin: 0px;
+        color: #3e3324;
+      }
+    }
+  }
+}
